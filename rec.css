@@ -1,0 +1,73 @@
+body{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    place-content: center;
+}
+
+.mic{
+    position: relative;
+    cursor: pointer;
+}
+.mic:active{
+    transform: translateY(4px) scale(0.95);
+    border-bottom-width: 2px ;
+}
+.mic::after{
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    box-shadow: 0 0 20px 20px #1c084f;
+    z-index: -1;
+    animation: circle-size 0.8s linear infinite
+    alternate ;
+}
+
+.mic-shadow{
+width: 400px;
+height: 400px;
+position: absolute;
+background-color: #3b0e68;
+border-radius: 100%;
+z-index: -2;
+box-shadow: 10px -55px 30px 15px #823ca6, 24px -10px 47px 10px #aab3d2, -21px -25px 97px 10px #5acee3, 51px 5px 17px 10px #1b7d8f, 3px 2px 77px 10px #f30bf5;
+animation: shadow-rotate 1.5s linear infinite;
+}
+
+.mic-shadow :hover{
+ bottom: 35px;
+}
+.fa-microphone {
+
+box-sizing: border-box;
+
+position: absolute;
+
+color:#fff;
+
+transform: translate(-50%, -50%) scale(10);
+
+@keyframes shadow-rotate{
+from{
+transform: translate(-50%, -50%) rotate(0deg);
+}
+to
+{
+transform: translate(-50%, -50%) rotate(360deg);
+}
+}
+
+@keyframes circle-size{
+
+from{
+
+width: 250px;
+
+height: 250px;
+}
+to{
+width: 300px;
+height: 300px;
+}
+} }
